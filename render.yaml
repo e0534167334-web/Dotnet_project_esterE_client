@@ -1,0 +1,13 @@
+# (רשות) פרסום הלקוח ב-Render כ-Static Site. כל push ל-main בונה מחדש
+services:
+  - type: web
+    name: baby-clinic-client
+    runtime: static
+    branch: main
+    autoDeploy: true
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      # כתובת השרת ב-Render, למשל https://baby-clinic-api.onrender.com
+      - key: VITE_API_URL
+        sync: false
