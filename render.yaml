@@ -8,6 +8,6 @@ services:
     buildCommand: npm ci && npm run build
     staticPublishPath: ./dist
     envVars:
-      # כתובת השרת ב-Render, למשל https://baby-clinic-api.onrender.com
+      # כתובת השרת ב-Render
       - key: VITE_API_URL
-        sync: false
+        value: https://baby-clinic-api.onrender.com
